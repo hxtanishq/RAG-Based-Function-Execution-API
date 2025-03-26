@@ -1,25 +1,102 @@
-# Function Execution API
+# 🤖 Function Execution API
 
 ## Overview
-An intelligent API that uses semantic search to map user prompts to system automation functions.
+An intelligent system that transforms natural language prompts into actionable system automation tasks using advanced semantic search and machine learning techniques.
 
-## Features
-- Semantic function discovery
-- Session-based memory
-- Comprehensive error logging
-- System automation capabilities
+## 🌟 Key Features
+- **Semantic Function Discovery**: Intelligently map user prompts to system functions
+- **Dynamic Function Execution**: Execute system commands through natural language
+- **Session-Based Memory**: Maintain context across interactions
+- **Comprehensive Error Logging**: Robust error tracking and management
+- **Multi-Interface Support**: CLI, Web, and API interfaces
 
-## Setup
-1. Clone the repository
-2. Create virtual environment
-3. Install dependencies: `pip install -r requirements.txt`
-4. Run the API: `python main.py`
+## 🛠 System Requirements
+- Python 3.8+
+- Windows, macOS, or Linux
 
-## Usage
-Send POST requests to `/execute` with a prompt and optional parameters.
+## 📦 Installation
 
-## Example
+### 1. Clone the Repository
 ```bash
+git clone https://github.com/yourusername/function-execution-api.git
+cd function-execution-api
+
+``` 
+### 2. Create Virtual Environment
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment
+# Windows
+.venv\Scripts\activate
+
+# macOS/Linux
+source .venv/bin/activate
+
+### 3. Install Dependencies
+pip install -r requirements.txt
+
+
+🚀 Running the Application
+API Server
+# Run FastAPI server
+uvicorn api.routes:app --reload
+
+### Command Line Interface
+
+# Interactive CLI mode
+python cli_interface.py -i
+
+# Single command execution
+python cli_interface.py -p "Open Chrome"
+
+
+### Web Interface
+# Launch Streamlit web interface
+streamlit run web_interface.py
+
+
+### 🔍 Usage Examples
+1. API Endpoint
+
+
+# Open Chrome
 curl -X POST http://localhost:8000/execute \
      -H "Content-Type: application/json" \
      -d '{"prompt": "Open Chrome", "params": {"url": "https://www.google.com"}}'
+
+# Get System Resources
+curl -X POST http://localhost:8000/execute \
+     -H "Content-Type: application/json" \
+     -d '{"prompt": "Check system performance"}'
+
+2. CLI Interface
+
+# Interactive mode
+python cli_interface.py -i
+
+# Prompt examples
+> Open Chrome
+> Open Calculator
+> Check system resources
+> Run shell command | {"command": "ls -l"}
+
+
+3. Streamlit Web Interface
+Enter natural language prompts
+Optional parameter configuration
+Real-time result visualization
+🧩 Supported Functions
+Open Chrome/Browser
+Open Calculator
+Get System Resources
+Run Shell Commands
+
+🔧 Customization
+Easy to add new system functions
+Extensible semantic search
+Configurable logging
+📊 Performance Metrics
+Low-latency function execution
+Efficient semantic matching
+Minimal system resource overhead

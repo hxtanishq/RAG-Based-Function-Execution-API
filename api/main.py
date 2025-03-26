@@ -1,6 +1,5 @@
 import uvicorn
-from api.routes import app  # Import the app directly from routes
-
+from api.routes import app   
 def create_app():
     return app
 
