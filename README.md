@@ -23,69 +23,66 @@ cd function-execution-api
 
 ``` 
 ### 2. Create Virtual Environment
-# Create virtual environment
+```bash
 python -m venv .venv
+```
+Activate virtual environment
+- Windows ```.venv\Scripts\activate ```
 
-# Activate virtual environment
-# Windows
-.venv\Scripts\activate
-
-# macOS/Linux
-source .venv/bin/activate
+- macOS/Linux ```source .venv/bin/activate```
 
 ### 3. Install Dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 
-🚀 Running the Application
-API Server
-# Run FastAPI server
-uvicorn api.routes:app --reload
+## 🚀 Running the Application
+### Run FastAPI server
+```uvicorn api.routes:app --reload```
 
 ### Command Line Interface
+- Interactive CLI mode
+```python cli_interface.py -i ```
 
-# Interactive CLI mode
-python cli_interface.py -i
-
-# Single command execution
-python cli_interface.py -p "Open Chrome"
+- Single command execution
+```python cli_interface.py -p "Open Chrome" ```
 
 
-### Web Interface
-# Launch Streamlit web interface
-streamlit run web_interface.py
+## Web Interface
+### Launch Streamlit web interface
+```streamlit run web_interface.py```
 
 
 ### 🔍 Usage Examples
 1. API Endpoint
 
-
-# Open Chrome
+- Open Chrome
+``` bash
 curl -X POST http://localhost:8000/execute \
      -H "Content-Type: application/json" \
      -d '{"prompt": "Open Chrome", "params": {"url": "https://www.google.com"}}'
+```
 
-# Get System Resources
+- Get System Resources
+```bash
 curl -X POST http://localhost:8000/execute \
      -H "Content-Type: application/json" \
      -d '{"prompt": "Check system performance"}'
+```
 
-2. CLI Interface
-
-# Interactive mode
-python cli_interface.py -i
 
 # Prompt examples
+```
 > Open Chrome
 > Open Calculator
 > Check system resources
 > Run shell command | {"command": "ls -l"}
+```
 
-
-3. Streamlit Web Interface
+- Streamlit Web Interface
 Enter natural language prompts
 Optional parameter configuration
 Real-time result visualization
+
 🧩 Supported Functions
 Open Chrome/Browser
 Open Calculator
@@ -96,6 +93,7 @@ Run Shell Commands
 Easy to add new system functions
 Extensible semantic search
 Configurable logging
+
 📊 Performance Metrics
 Low-latency function execution
 Efficient semantic matching
