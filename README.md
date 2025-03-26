@@ -103,5 +103,7 @@ Minimal system resource overhead
 Here is a sample output image illustrating the results:
 
 ![Sample Results](results/1.png)
+
 ![Sample Results](results/2.png)
+
 ![Sample Results](results/output.jpeg)
